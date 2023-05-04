@@ -1,6 +1,7 @@
 #Use CxFlow Base image
 FROM checkmarx/cx-flow
 RUN apk add maven
+RUN apk add py3-pip
 
 #install sbt
 ENV SBT_VERSION 1.8.2
