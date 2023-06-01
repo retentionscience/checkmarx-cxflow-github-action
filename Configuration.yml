@@ -1,0 +1,42 @@
+## Authentication
+#Account:
+#Username:
+#Password:
+
+## Defaults
+ExcludePatterns:
+ProjectName:
+#ResolverResultPath:
+#SeverityThreshold: None
+#AdditionalManifestPatterns:
+#  pip:
+#    - example-*.txt
+
+## System
+ServerUrl: https://api-sca.checkmarx.net
+AuthenticationServerUrl: https://platform.checkmarx.net
+LogsDirectory: logs
+ScaAppUrl: https://sca.checkmarx.net
+#OldResultsThresholdMinutes: 144000
+#EngineResultsSendTimeOutMinutes: 2
+#EngineResultsReceiveTimeOutMinutes: 15
+LogLevel: Verbose
+
+#ScanReportWaitForFinishDelayInSeconds: 5
+#ScanReportMaxRetries: 2147483647
+#PythonVersion: V2
+#IgnoreDevDependencies: false
+#SastUserName:
+#SastPassword:
+#SastProjectId:
+#SastServer:
+#BypassExitCode: false
+#BreakOnManifestFailure: false
+#NugetCliPath:
+#NetRcPath:
+#PipDepTreeVersion: 2.3.1
+#OverrideDefaultExcludes: false
+
+#PrivateDependencyType:
+#PrivateDependencyName:
+#PrivateDependencyVersion:
