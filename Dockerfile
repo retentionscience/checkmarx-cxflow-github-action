@@ -20,8 +20,9 @@ RUN mkdir /scar
 COPY ScaResolver /scar/ScaResolver
 RUN chmod +x /scar/ScaResolver
 
-RUN mkdir -p /root/.ivy2
+RUN mkdir -p /root/.ivy2 && mkdir /root/.pip
 COPY .nexus.rsci.co.credentials /root/.ivy2/.nexus.rsci.co.credentials
+COPY pip.conf /root/.pip/pip.conf
 
 #Copy the entrypoint script and properties used for the action
 COPY entrypoint.sh /app/entrypoint.sh
