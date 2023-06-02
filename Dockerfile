@@ -11,7 +11,6 @@ ln -s /usr/local/sbt/bin/sbt /usr/local/bin/sbt && \
 chmod 0755 /usr/local/bin/sbt 
 
 #SCA Resolver Logs
-RUN grep "LogLevel" /app/Configuration.yml
 COPY Configuration.yml /app/Configuration.yml
 RUN grep "LogLevel" /app/Configuration.yml
 
@@ -23,6 +22,8 @@ RUN chmod +x /scar/ScaResolver
 RUN mkdir -p /root/.ivy2 && mkdir /root/.pip
 COPY .nexus.rsci.co.credentials /root/.ivy2/.nexus.rsci.co.credentials
 COPY pip.conf /root/.pip/pip.conf
+
+RUN pip3 install virtualenv
 
 #Copy the entrypoint script and properties used for the action
 COPY entrypoint.sh /app/entrypoint.sh
